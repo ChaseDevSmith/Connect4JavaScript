@@ -1,38 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title >Connect 4</title>
+    <title>Connect 4</title>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script> src="createBoard.js"</script>
-  <script> src= "main.js" </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        src = "createBoard.js"
+    </script>
+    <script>
+        src = "main.js"
+    </script>
 
-  <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
 
-   
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  <h1 class="title" >Connect 4</h1>
-  <h3 class = "redScore"> RED Score: </h3>
-  <h3 class = "yellowScore"> YELLOW Score: </h3>
-  <div class= "timer" id="app"></div>
-  <div class = "grid" id="board" >
+    <div class="app-container">
+        <div class="title-container">
+            <h3 class="redScore"> RED Score: </h3>
+            <h1 class="title">Connect 4</h1>
 
-   
-  </div>
-  <button id="myBtn" hidden>Open Modal</button>
-  <div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div id="modal-content" class="modal-content" >
-      <span class="close">&times;</span>
+            <h3 class="yellowScore"> YELLOW Score: </h3>
+
+        </div>
+        <div class="grid-container">
+            <div class="selection-row">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+
+            </div>
+            <div class="board" id="board">
+
+
+            </div>
+
+        </div>
+
+        <div class="bottom-container">
+            <button id=reset> reset board </button>
+            <div class="timer" id="app"></div>
+        </div>
+
     </div>
-  
-  </div>
-  <button id = reset > reset board </button>
-  <script src="main.js"></script>
-  <script src="createBoard.js"> </script>
+    <button id="myBtn" hidden>Open Modal</button>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div id="modal-content" class="modal-content">
+            <span class="close">&times;</span>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+    <script src="createBoard.js">
+    </script>
 </body>
 <!-- <button id = "restart" >  Play Again </button> -->
+
 </html>

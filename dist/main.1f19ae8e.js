@@ -126,7 +126,26 @@ $(document).ready(function () {
     playerTwo: "yellow"
   };
   var redwins = 0;
-  var yellowwins = 0; ////event handler
+  var yellowwins = 0;
+  var cells = $(".cell");
+
+  var selectDot = function selectDot() {
+    $(".dot").each(function (index, element) {
+      $(element).on({
+        mouseenter: function mouseenter() {
+          if (cells[index].attributes['data-player'].nodeValue == 0) {
+            $(element).css("background-color", colors[currentPlayerName]);
+          }
+        },
+        mouseleave: function mouseleave() {
+          //make the background white
+          $(element).css("background-color", "white");
+        }
+      });
+    });
+  };
+
+  selectDot(); ////event handler
 
   document.getElementById("reset").addEventListener("click", resetBoard); ///boardsetup
 
@@ -330,7 +349,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51997" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49728" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
